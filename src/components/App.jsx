@@ -16,7 +16,8 @@ function App() {
       });
   }
   let priceINR = (0.021639733645 * price.INR - 299.92).toFixed(4);
-If(isNaN(priceINR)){return(<H1>loading<H1>);}
+If(isNaN(priceINR))
+{return(<h1>loading<h1>);}
 else{
   return (
     <div className="container">
