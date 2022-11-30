@@ -16,16 +16,15 @@ function App() {
       });
   }
   let priceINR = (0.021639733645 * price.INR - 299.92).toFixed(4);
-If(isNaN(priceINR))
-{return(<h1>loading<h1>);}
-else{
+
+
   return (
     <div className="container">
       <h1 style={{ color: priceINR > 0 ? "green" : "red", fontSize: "300%" }}>
-        YourP/L:{priceINR}
+        YourP/L:{isNaN(priceINR)? Loading:priceINR}
       </h1>
-      <h4>one coin: {price.INR}</h4>
+      <h4>one coin: {isNaN(priceINR)? Loading:price.INR}</h4>
     </div>
-  );}
+  );
 }
 export default App;
