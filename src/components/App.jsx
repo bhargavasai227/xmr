@@ -21,9 +21,9 @@ function App() {
   return (
     <div className="container">
       <h1 style={{ color: priceINR > 0 ? "green" : "red", fontSize: "300%" }}>
-        YourP/L:{isNaN(priceINR)? Loading:priceINR}
+        YourP/L:{isNaN(priceINR)?"Loading":priceINR}
       </h1>
-      <h4>one coin: {isNaN(priceINR)? Loading:price.INR}</h4>
+      <h4>one coin: {isNaN(priceINR)?"Loading":price.INR}</h4>
     </div>
   );
 }
